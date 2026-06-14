@@ -284,50 +284,79 @@
   <div class="project">
     <div class="project-head">
       <div>
-        <div class="pid">PRJ-03 // EGR206 IOT PROJECT</div>
+        <div class="pid">PRJ-03 // EGR206 IOT PROJECT — NANYANG POLYTECHNIC</div>
         <h3>Smart Pill Dispenser</h3>
       </div>
       <div class="pdate">2025</div>
     </div>
-    <div class="project-body">
-      <div class="pill-gallery">
-        <img src="images/pill_dashboard.png" alt="Tkinter GUI Dashboard">
-        <img src="images/pill_hardware_front.png" alt="Hardware front view with labelled components">
-        <img src="images/pill_hardware_internal.png" alt="Internal wiring and components">
-        <img src="images/pill_servo_code.png" alt="Servo motor configuration code">
-        <img src="images/pill_sensehat_code.png" alt="SenseHat verification code">
+    <div class="project-body" style="grid-template-columns: 1.2fr 1fr;">
+      <div>
+        <div class="slideshow" id="pill-slider">
+          <div class="slideshow-inner" id="pill-inner">
+            <img src="images/pill_slide_01.png" alt="Smart Pill Dispenser title slide">
+            <img src="images/pill_slide_02.png" alt="Introduction — hardware used">
+            <img src="images/pill_slide_03.png" alt="How medication is managed today">
+            <img src="images/pill_slide_04.png" alt="The problem we are solving">
+            <img src="images/pill_slide_05.png" alt="What our prototype does">
+            <img src="images/pill_slide_06.png" alt="Live demo walkthrough">
+            <img src="images/pill_slide_07.png" alt="System operation flowchart">
+            <img src="images/pill_slide_08.png" alt="Conclusion and future improvements">
+            <img src="images/pill_slide_09.png" alt="Team contributions">
+            <img src="images/pill_dashboard.png" alt="Tkinter GUI Dashboard">
+            <img src="images/pill_hardware_front.png" alt="Hardware front view">
+            <img src="images/pill_hardware_internal.png" alt="Internal wiring and components">
+            <img src="images/pill_servo_code.png" alt="Servo motor configuration code">
+            <img src="images/pill_sensehat_code.png" alt="SenseHat verification code">
+          </div>
+          <button class="slide-btn slide-prev" onclick="slide('pill',-1)">&#8592;</button>
+          <button class="slide-btn slide-next" onclick="slide('pill',1)">&#8594;</button>
+          <div class="slide-counter" id="pill-counter">1 / 14</div>
+        </div>
       </div>
       <div class="project-detail">
         <div class="field">
-          <div class="field-label">Scope</div>
-          <div class="field-value">A Raspberry Pi 4-based smart pill dispenser for assisted care patients. Features a secure 4-digit joystick passcode on SenseHat LED matrix, servo-controlled dispensing, ultrasonic pill counting, and real-time cloud monitoring via Adafruit IO.</div>
+          <div class="field-label">The Problem</div>
+          <div class="field-value">50% of patients don't take medication as prescribed. Over 125,000 deaths per year are linked to medication non-adherence, and 1 in 3 assisted care patients experience a dosing error. Current solutions — manual pill boxes, blister packs, nurse rounds — rely entirely on human memory with no alerts, tracking or remote visibility.</div>
         </div>
         <div class="field">
-          <div class="field-label">My Role & Approach</div>
-          <div class="field-value">Built the software interface and cloud connectivity. My teammate Adib handled the GrovePi hardware and embedded code (main program, servo logic, SenseHat passcode, ultrasonic counter). I focused on the GUI dashboard and cloud integration, resolving feed mismatches between hardware output and cloud data.</div>
+          <div class="field-label">Our Solution</div>
+          <div class="field-value">A fully integrated, IoT-connected medication management system built on Raspberry Pi 4 with GrovePi+, SenseHat, servo motors, and Adafruit IO cloud. The device secures, dispenses, monitors and reports medication usage in real time.</div>
         </div>
         <div class="field">
-          <div class="field-label">Key Features Built</div>
+          <div class="field-label">My Contributions</div>
           <div class="field-value">
             <ul>
-              <li>Tkinter GUI dashboard — live pill count, dose status, system logs</li>
-              <li>Adafruit IO cloud integration — real-time dashboard sync</li>
-              <li>Secure passcode panel — SenseHat joystick, LED matrix feedback</li>
-              <li>Auto-locking servo — 5-second warning before re-lock</li>
-              <li>Tamper detection — light sensor triggers buzzer alert</li>
+              <li><strong>Tkinter GUI dashboard</strong> — doctor admin panel with password login, live pill count, dose status, system alerts and remote refill management</li>
+              <li><strong>Adafruit IO cloud integration</strong> — streamed all events live (door state, pill count, dose flags, temperature, alerts)</li>
+              <li><strong>Real-time status sync</strong> — resolved hardware-to-cloud feed mismatches to ensure accurate data</li>
+              <li><strong>Presentation slides</strong> — designed all project slides</li>
+            </ul>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">System Features</div>
+          <div class="field-value">
+            <ul>
+              <li>4-digit joystick passcode on SenseHat LED matrix — wrong entry triggers red flash and scrolling alert</li>
+              <li>Servo-controlled access panel — auto-relocks after 5-second buzzer warning</li>
+              <li>Button-triggered dispenser servo — drops one pill per press</li>
+              <li>Ultrasonic pill counter — maps distance to count (0–4 pills), live LCD display</li>
+              <li>Light sensor tamper detection — buzzer and LED alarm if panel left open</li>
+              <li>Debug mode — hidden passcode [0,0,0,0] for engineering access, logged to cloud</li>
             </ul>
           </div>
         </div>
         <div class="field">
           <div class="field-label">Tech Stack</div>
-          <div class="field-value">Raspberry Pi 4, GrovePi+, SenseHat, PCA9685 PWM Driver, Python, Tkinter, Adafruit IO</div>
+          <div class="field-value">Raspberry Pi 4 &nbsp;·&nbsp; GrovePi+ &nbsp;·&nbsp; SenseHat &nbsp;·&nbsp; PCA9685 PWM Driver &nbsp;·&nbsp; Python &nbsp;·&nbsp; Tkinter &nbsp;·&nbsp; Adafruit IO</div>
         </div>
       </div>
     </div>
     <div class="result-strip">
-      <div class="stat"><b>Working</b><span>Prototype Delivered</span></div>
+      <div class="stat"><b>Fully Integrated</b><span>IoT Prototype Delivered</span></div>
       <div class="stat"><b>Cloud-Connected</b><span>Real-Time GUI Dashboard</span></div>
-      <div class="stat"><b>50%</b><span>of Patients Miss Medication — Problem Addressed</span></div>
+      <div class="stat"><b>125K+</b><span>Deaths/Year Problem Addressed</span></div>
+      <div class="stat"><b>6 Features</b><span>Security, Dispense, Count, Tamper, Cloud, GUI</span></div>
     </div>
   </div>
 </section>
@@ -360,8 +389,8 @@
 <footer>NG QIN XUAN — DIGITAL PORTFOLIO — NYP DIPLOMA IN ROBOTICS & MECHATRONICS</footer>
 
 <script>
-const sliders = { ecopaw: 0 };
-const totals = { ecopaw: 18 };
+const sliders = { ecopaw: 0, pill: 0 };
+const totals = { ecopaw: 18, pill: 14 };
 
 function slide(id, dir) {
   sliders[id] = (sliders[id] + dir + totals[id]) % totals[id];
