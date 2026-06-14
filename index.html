@@ -6,104 +6,119 @@
 <title>Ng Qin Xuan — Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --graphite: #1A1D23; --graphite-soft: #232730; --steel: #4A7C9E;
-    --silver: #C8CDD3; --amber: #E8A04C; --paper: #F4F2EE; --line: #3A3F4A;
-    --display: 'Space Grotesk', sans-serif; --body: 'Inter', sans-serif; --mono: 'JetBrains Mono', monospace;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--paper); color: var(--graphite); font-family: var(--body); line-height: 1.6; }
+:root {
+  --graphite:#1A1D23; --soft:#232730; --steel:#7A7060;
+  --silver:#C8CDD3; --amber:#E8A04C; --paper:#F4F2EE; --line:#3A3F4A;
+  --dp:'Space Grotesk',sans-serif; --bd:'Inter',sans-serif; --mn:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--graphite);font-family:var(--bd);line-height:1.6;}
 
-  nav { position: sticky; top: 0; z-index: 100; background: var(--graphite); border-bottom: 1px solid var(--line); padding: 0 6vw; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .nav-mark { font-family: var(--mono); color: var(--amber); font-size: 0.85rem; letter-spacing: 0.1em; font-weight: 600; }
-  .nav-links { display: flex; gap: 2rem; }
-  .nav-links a { color: var(--silver); text-decoration: none; font-size: 0.85rem; font-family: var(--mono); letter-spacing: 0.05em; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--amber); }
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:var(--graphite);border-bottom:1px solid var(--line);padding:0 6vw;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-mark{font-family:var(--mn);color:var(--amber);font-size:.85rem;letter-spacing:.1em;font-weight:600;}
+.nav-links{display:flex;gap:2rem;}
+.nav-links a{color:var(--silver);text-decoration:none;font-size:.85rem;font-family:var(--mn);transition:color .2s;}
+.nav-links a:hover{color:var(--amber);}
 
-  .hero { background: var(--graphite); color: var(--paper); padding: 7vw 6vw 6vw; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 45%; background: repeating-linear-gradient(135deg, transparent 0 18px, rgba(74,124,158,0.07) 18px 19px), repeating-linear-gradient(45deg, transparent 0 18px, rgba(232,160,76,0.05) 18px 19px); pointer-events: none; }
-  .eyebrow { font-family: var(--mono); color: var(--steel); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1.2rem; position: relative; z-index: 1; }
-  .hero h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2.6rem, 6vw, 4.8rem); line-height: 1.05; letter-spacing: -0.02em; max-width: 14ch; position: relative; z-index: 1; }
-  .hero h1 span { color: var(--amber); }
-  .hero-sub { margin-top: 1.6rem; max-width: 46ch; color: var(--silver); font-size: 1.05rem; position: relative; z-index: 1; }
-  .hero-meta { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 2.5rem; font-family: var(--mono); font-size: 0.8rem; color: var(--steel); position: relative; z-index: 1; }
-  .hero-meta div b { display: block; color: var(--paper); font-size: 1.4rem; font-family: var(--display); font-weight: 700; margin-bottom: 0.2rem; }
-  .hero-cta { margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap; position: relative; z-index: 1; }
-  .btn { font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.05em; padding: 0.85rem 1.6rem; border-radius: 2px; text-decoration: none; transition: transform 0.15s ease, background 0.2s, color 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
-  .btn-primary { background: var(--amber); color: var(--graphite); font-weight: 600; }
-  .btn-primary:hover { transform: translateY(-2px); }
-  .btn-ghost { border: 1px solid var(--line); color: var(--paper); }
-  .btn-ghost:hover { border-color: var(--steel); color: var(--steel); }
+/* HERO */
+.hero{background:var(--graphite);color:var(--paper);padding:7vw 6vw 6vw;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:0;right:0;bottom:0;width:45%;background:repeating-linear-gradient(135deg,transparent 0 18px,rgba(74,124,158,.07) 18px 19px),repeating-linear-gradient(45deg,transparent 0 18px,rgba(232,160,76,.05) 18px 19px);pointer-events:none;}
+.eyebrow{font-family:var(--mn);color:var(--steel);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.2rem;position:relative;z-index:1;}
+.hero h1{font-family:var(--dp);font-weight:700;font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.05;letter-spacing:-.02em;max-width:14ch;position:relative;z-index:1;}
+.hero h1 span{color:var(--amber);}
+.hero-sub{margin-top:1.4rem;max-width:46ch;color:var(--silver);font-size:1rem;position:relative;z-index:1;}
+.hero-meta{margin-top:2rem;display:flex;flex-wrap:wrap;gap:2rem;font-family:var(--mn);font-size:.78rem;color:var(--steel);position:relative;z-index:1;}
+.hero-meta div b{display:block;color:var(--paper);font-size:1.35rem;font-family:var(--dp);font-weight:700;margin-bottom:.15rem;}
+.hero-cta{margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;position:relative;z-index:1;}
+.btn{font-family:var(--mn);font-size:.82rem;padding:.8rem 1.4rem;border-radius:2px;text-decoration:none;transition:transform .15s,background .2s,color .2s;display:inline-flex;align-items:center;gap:.4rem;}
+.btn-primary{background:var(--amber);color:var(--graphite);font-weight:600;}
+.btn-primary:hover{transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--line);color:var(--paper);}
+.btn-ghost:hover{border-color:var(--steel);color:var(--steel);}
 
-  section { padding: 5.5vw 6vw; }
-  .section-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 3rem; border-bottom: 1px solid var(--line); padding-bottom: 1.2rem; }
-  .section-tag { font-family: var(--mono); font-size: 0.8rem; color: var(--steel); letter-spacing: 0.15em; text-transform: uppercase; }
-  .section-head h2 { font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -0.01em; }
+/* SECTIONS */
+section{padding:5vw 6vw;}
+.sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:2.5rem;border-bottom:1px solid var(--line);padding-bottom:1rem;}
+.sec-tag{font-family:var(--mn);font-size:.78rem;color:var(--amber);letter-spacing:.15em;text-transform:uppercase;}
+.sec-head h2{font-family:var(--dp);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;letter-spacing:-.01em;}
 
-  .about { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
-  .about-card { background: var(--graphite); color: var(--paper); padding: 2rem; border-radius: 4px; font-family: var(--mono); font-size: 0.85rem; }
-  .about-card .label { color: var(--steel); letter-spacing: 0.1em; font-size: 0.75rem; margin-bottom: 0.4rem; }
-  .about-card .row { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid var(--line); }
-  .about-card .row:last-child { border-bottom: none; }
-  .about-bio p { margin-bottom: 1.2rem; font-size: 1.05rem; max-width: 60ch; }
-  .about-bio p:first-of-type { font-family: var(--display); font-weight: 600; font-size: 1.3rem; }
-  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
-  .skill-tags span { font-family: var(--mono); font-size: 0.75rem; padding: 0.4rem 0.8rem; border: 1px solid var(--graphite); border-radius: 2px; letter-spacing: 0.03em; }
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start;}
+.about-left{}
+.profile-card{background:var(--graphite);color:var(--paper);border-radius:6px;overflow:hidden;}
+.profile-photo{width:100%;aspect-ratio:1;background:var(--soft);display:flex;align-items:center;justify-content:center;font-family:var(--mn);color:var(--steel);font-size:.8rem;border-bottom:1px solid var(--line);}
+.profile-info{padding:1.2rem;}
+.profile-info .row{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid var(--line);font-size:.82rem;font-family:var(--mn);}
+.profile-info .row:last-child{border-bottom:none;}
+.profile-info .row span:first-child{color:var(--steel);}
+.about-right{}
+.about-intro{font-family:var(--dp);font-size:1.25rem;font-weight:600;margin-bottom:1.2rem;line-height:1.4;}
+.about-body{font-size:.97rem;color:#2a2d35;margin-bottom:1.5rem;max-width:62ch;}
+.about-body p{margin-bottom:.9rem;}
 
-  .project { border: 1px solid var(--line); background: #ffffff; margin-bottom: 2.5rem; border-radius: 4px; overflow: hidden; }
-  .project-head { background: var(--graphite); color: var(--paper); padding: 1.4rem 2rem; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
-  .project-head .pid { font-family: var(--mono); color: var(--amber); font-size: 0.8rem; letter-spacing: 0.15em; }
-  .project-head h3 { font-family: var(--display); font-size: 1.5rem; font-weight: 700; margin-top: 0.3rem; }
-  .project-head .pdate { font-family: var(--mono); font-size: 0.8rem; color: var(--steel); }
-  .project-body { padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .project-detail .field { margin-bottom: 1.2rem; }
-  .project-detail .field-label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.15em; color: var(--steel); text-transform: uppercase; margin-bottom: 0.35rem; }
-  .project-detail .field-value { font-size: 0.95rem; }
-  .project-detail ul { padding-left: 1.2rem; margin-top: 0.3rem; }
-  .project-detail li { margin-bottom: 0.3rem; }
-  .result-strip { background: var(--paper); border-top: 1px solid var(--line); padding: 1.2rem 2rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
-  .result-strip .stat b { display: block; font-family: var(--display); font-size: 1.6rem; color: var(--graphite); font-weight: 700; }
-  .result-strip .stat span { font-family: var(--mono); font-size: 0.7rem; color: var(--steel); letter-spacing: 0.1em; text-transform: uppercase; }
+.cards-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;}
+.info-card{background:#fff;border:1px solid #ddd;border-radius:4px;padding:1rem 1.2rem;}
+.info-card h4{font-family:var(--mn);font-size:.7rem;color:var(--graphite);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.6rem;}
+.info-card ul{list-style:none;font-size:.88rem;}
+.info-card ul li{padding:.25rem 0;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;gap:.5rem;}
+.info-card ul li:last-child{border-bottom:none;}
+.info-card ul li::before{content:'▸';color:var(--amber);font-size:.7rem;}
 
-  /* WATCH GALLERY */
-  .watch-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
-  .watch-gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; transition: transform 0.2s; cursor: pointer; }
-  .watch-gallery img:hover { transform: scale(1.03); }
-  .carousell-link { display: flex; align-items: center; justify-content: center; height: 200px; background: var(--graphite); border-radius: 4px; text-decoration: none; flex-direction: column; gap: 0.5rem; border: 1px solid var(--amber); }
-  .carousell-link span:first-child { color: var(--amber); font-size: 1.1rem; font-weight: 600; font-family: var(--display); }
-  .carousell-link span:last-child { color: var(--silver); font-family: var(--mono); font-size: 0.75rem; }
+.skill-grid{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem;}
+.skill-pill{font-family:var(--mn);font-size:.72rem;padding:.35rem .75rem;border:1px solid var(--graphite);border-radius:2px;background:#fff;}
+.skill-pill.highlight{background:var(--graphite);color:var(--paper);}
 
-  /* SLIDESHOW */
-  .slideshow { position: relative; background: #000; border-radius: 4px; overflow: hidden; }
-  .slideshow-inner { display: flex; transition: transform 0.4s ease; }
-  .slideshow-inner img { min-width: 100%; width: 100%; display: block; }
-  .slide-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: #fff; border: none; font-size: 1.5rem; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; z-index: 10; }
-  .slide-btn:hover { background: var(--amber); color: var(--graphite); }
-  .slide-prev { left: 10px; }
-  .slide-next { right: 10px; }
-  .slide-counter { position: absolute; bottom: 10px; right: 14px; background: rgba(0,0,0,0.6); color: #fff; font-family: var(--mono); font-size: 0.75rem; padding: 3px 8px; border-radius: 3px; }
+/* PROJECTS */
+.project{border:1px solid var(--line);background:#fff;margin-bottom:2.5rem;border-radius:4px;overflow:hidden;}
+.proj-head{background:var(--graphite);color:var(--paper);padding:1.2rem 1.8rem;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;}
+.proj-head .pid{font-family:var(--mn);color:var(--amber);font-size:.75rem;letter-spacing:.15em;margin-bottom:.25rem;}
+.proj-head h3{font-family:var(--dp);font-size:1.4rem;font-weight:700;}
+.proj-head .pdate{font-family:var(--mn);font-size:.78rem;color:var(--steel);white-space:nowrap;}
+.proj-body{padding:1.8rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.proj-detail .field{margin-bottom:1.1rem;}
+.field-lbl{font-family:var(--mn);font-size:.68rem;letter-spacing:.15em;color:var(--steel);text-transform:uppercase;margin-bottom:.3rem;}
+.field-val{font-size:.93rem;}
+.field-val ul{padding-left:1.1rem;margin-top:.3rem;}
+.field-val li{margin-bottom:.3rem;}
+.result-strip{background:var(--paper);border-top:1px solid var(--line);padding:1rem 1.8rem;display:flex;gap:2rem;flex-wrap:wrap;}
+.stat b{display:block;font-family:var(--dp);font-size:1.4rem;font-weight:700;}
+.stat span{font-family:var(--mn);font-size:.68rem;color:var(--steel);letter-spacing:.08em;text-transform:uppercase;}
 
-  /* PILL GALLERY */
-  .pill-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
-  .pill-gallery img { width: 100%; border-radius: 3px; object-fit: cover; }
-  .pill-gallery img:first-child { grid-column: span 2; }
+/* SLIDESHOW */
+.slideshow{position:relative;background:#111;border-radius:4px;overflow:hidden;line-height:0;}
+.slide-track{display:flex;transition:transform .35s ease;width:100%;}
+.slide-track img{min-width:100%;width:100%;height:auto;display:block;}
+.slide-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.65);color:#fff;border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:10;}
+.slide-btn:hover{background:var(--amber);color:var(--graphite);}
+.slide-prev{left:8px;}.slide-next{right:8px;}
+.slide-ctr{position:absolute;bottom:8px;right:10px;background:rgba(0,0,0,.6);color:#fff;font-family:var(--mn);font-size:.72rem;padding:2px 7px;border-radius:3px;}
 
-  .contact { background: var(--graphite); color: var(--paper); }
-  .contact .section-head { border-bottom-color: var(--line); }
-  .contact .section-tag { color: var(--amber); }
-  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
-  .contact-item .field-label { color: var(--steel); font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.4rem; }
-  .contact-item a { color: var(--paper); text-decoration: none; font-family: var(--mono); font-size: 1rem; }
-  .contact-item a:hover { color: var(--amber); }
-  footer { text-align: center; padding: 2rem; font-family: var(--mono); font-size: 0.75rem; color: var(--silver); background: var(--graphite); border-top: 1px solid var(--line); }
+/* WATCH GALLERY */
+.watch-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;}
+.watch-grid img{width:100%;height:160px;object-fit:cover;border-radius:3px;}
+.watch-cta{display:flex;align-items:center;justify-content:center;height:160px;background:var(--graphite);border-radius:3px;text-decoration:none;flex-direction:column;gap:.4rem;border:1px solid var(--amber);}
+.watch-cta span:first-child{color:var(--amber);font-weight:600;font-family:var(--dp);}
+.watch-cta span:last-child{color:var(--silver);font-family:var(--mn);font-size:.72rem;}
 
-  @media (max-width: 800px) {
-    .about, .project-body { grid-template-columns: 1fr; }
-    .watch-gallery { grid-template-columns: 1fr 1fr; }
-    .pill-gallery { grid-template-columns: 1fr; }
-    .pill-gallery img:first-child { grid-column: span 1; }
-  }
+/* CONTACT */
+.contact-sec{background:var(--graphite);color:var(--paper);}
+.contact-sec .sec-head{border-bottom-color:var(--line);}
+.contact-sec .sec-tag{color:var(--amber);}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;}
+.c-item .field-lbl{color:var(--steel);}
+.c-item a{color:var(--paper);text-decoration:none;font-family:var(--mn);font-size:.95rem;}
+.c-item a:hover{color:var(--amber);}
+
+footer{text-align:center;padding:1.5rem;font-family:var(--mn);font-size:.72rem;color:var(--silver);background:var(--graphite);border-top:1px solid var(--line);}
+
+@media(max-width:860px){
+  .about-grid{grid-template-columns:1fr;}
+  .cards-row{grid-template-columns:1fr;}
+  .proj-body{grid-template-columns:1fr;}
+  .watch-grid{grid-template-columns:1fr 1fr;}
+}
 </style>
 </head>
 <body>
@@ -111,297 +126,406 @@
 <nav>
   <div class="nav-mark">NQX // PORTFOLIO</div>
   <div class="nav-links">
-    <a href="#about">Profile</a>
+    <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <header class="hero">
-  <div class="eyebrow">Robotics & Mechatronics — Sales-Minded Engineer</div>
-  <h1>Built a watch business from S$300.<br>Now bringing that <span>drive to technical sales.</span></h1>
-  <p class="hero-sub">I'm Ng Qin Xuan, a Diploma in Robotics & Mechatronics graduate from Nanyang Polytechnic. I combine hands-on engineering training with real commercial experience — running my own luxury watch resale business, generating leads through hundreds of sales calls, and delivering technical projects from IoT systems to product pitches.</p>
+  <div class="eyebrow">Robotics & Mechatronics Graduate — NYP, Apr 2027</div>
+  <h1>Built a business.<br><span>Studied the machines.</span></h1>
+  <p class="hero-sub">I graduated from NYP with a Diploma in Robotics & Mechatronics and spent the last few years running a watch resale business on the side. I know how to build things and I know how to sell them.</p>
   <div class="hero-meta">
-    <div><b>S$300 → 5-fig</b>Watch business revenue growth</div>
-    <div><b>500+</b>Outbound sales calls made</div>
-    <div><b>3</b>Featured engineering & business projects</div>
+    <div><b>S$300→5-Fig</b>Watch business, Year 1</div>
+    <div><b>500+</b>Outbound sales calls</div>
+    <div><b>3</b>Featured projects</div>
   </div>
   <div class="hero-cta">
     <a href="#projects" class="btn btn-primary">View Projects ↓</a>
-    <a href="https://carousell.app.link/qBIrn3XiW3b" class="btn btn-ghost" target="_blank" rel="noopener">View Watch Shop ↗</a>
+    <a href="https://carousell.app.link/qBIrn3XiW3b" class="btn btn-ghost" target="_blank" rel="noopener">Watch Shop ↗</a>
   </div>
 </header>
 
+<!-- ABOUT -->
 <section id="about">
-  <div class="section-head">
-    <span class="section-tag">01 / Profile</span>
+  <div class="sec-head">
+    <span class="sec-tag">01 / Profile</span>
     <h2>About Me</h2>
   </div>
-  <div class="about">
-    <div class="about-card">
-      <div class="label">// CURRENT STATUS</div>
-      <div class="row"><span>Education</span><span>Dip. Robotics & Mechatronics, NYP</span></div>
-      <div class="row"><span>Status</span><span>Graduate</span></div>
-      <div class="row"><span>Based in</span><span>Singapore (East)</span></div>
-      <div class="row"><span>Focus</span><span>Technical / B2B Sales</span></div>
-      <div class="row"><span>Contact</span><span>qinxuan703@gmail.com</span></div>
+  <div class="about-grid">
+    <div class="about-left">
+      <div class="profile-card">
+        
+        <div class="profile-info">
+          <div class="row"><span>Name</span><span>Ng Qin Xuan</span></div>
+          <div class="row"><span>Diploma</span><span>Robotics & Mechatronics</span></div>
+          <div class="row"><span>School</span><span>Nanyang Polytechnic</span></div>
+          <div class="row"><span>Location</span><span>Singapore (East)</span></div>
+          <div class="row"><span>Email</span><span style="font-size:.72rem;">qinxuan703@gmail.com</span></div>
+        </div>
+      </div>
     </div>
-    <div class="about-bio">
-      <p>I think of myself as an engineer who's spent the last few years also running a business.</p>
-      <p>My diploma gave me a solid grounding in automation, robotics, electronics, embedded systems and basic machine learning — but the experience I'm most proud of is one I built myself. Since 2024 I've run a luxury watch resale business, growing it from S$300 in starting capital to five-figure annual revenue by sourcing, authenticating, valuing and selling pre-owned watches to a growing base of repeat customers and collectors.</p>
-      <p>Alongside that, I've taken on part-time telemarketing and real estate sales work — over 500 outbound calls and counting — and worked on engineering projects ranging from an IoT smart pill dispenser to a pitch deck for a pet-waste management startup concept. I'm looking for a role where I can put both halves of that experience to work.</p>
-      <div class="skill-tags">
-        <span>Sales & Negotiation</span><span>Business Operations</span><span>E-Commerce</span>
-        <span>PLC & Automation</span><span>Python / Tkinter</span><span>C++</span>
-        <span>CAD (Autodesk Inventor)</span><span>Team Player</span>
+    <div class="about-right">
+      <p class="about-intro">I like building things. I also like selling them.</p>
+      <div class="about-body">
+        <p>I graduated from Nanyang Polytechnic with a Diploma in Robotics & Mechatronics in April 2027. The course covered automation, robotics, electronics, embedded systems and PLC programming — hands-on work across most of the engineering stack.</p>
+        <p>Outside school, I founded a luxury watch resale business from S$300 in 2024 and grew it to five-figure revenue within a year — doing everything myself from sourcing and authenticating watches to managing customers and cash flow. I also did telemarketing and real estate sales on the side, putting in 500+ outbound calls.</p>
+        <p>I'm drawn to roles where technical knowledge meets client-facing work — particularly in technical sales or business development where I can use both sides of my experience.</p>
+      </div>
+
+      <div class="cards-row">
+        <div class="info-card">
+          <h4>Education — Diploma in Robotics & Mechatronics, NYP</h4>
+          <p style="font-size:.75rem;color:var(--steel);margin:.4rem 0 .8rem;font-family:var(--mn);">Click any module to see what I learnt</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.3rem .8rem;margin-top:.2rem;font-size:.85rem;">
+            <span class="mod" data-info="Went through algebraic expressions, equations, matrices and vectors. Useful groundwork for understanding kinematics and control systems later on.">▸ Algebra</span>
+            <span class="mod" data-info="Covered differentiation and integration — used this to work out motion, velocity and acceleration in engineering problems.">▸ Calculus</span>
+            <span class="mod" data-info="Learnt how to solve differential equations and series. Came in handy when modelling things like spring-mass-damper systems and control loops.">▸ Differential Equations & Series</span>
+            <span class="mod" data-info="Covered Poisson distributions, binomial probability, hypothesis testing and confidence intervals. Got a good grip on reading and interpreting statistical data.">▸ Probability & Statistics</span>
+            <span class="mod" data-info="First proper introduction to programming in C++. Went through variables, loops, functions and basic object-oriented concepts.">▸ Programming</span>
+            <span class="mod" data-info="Learnt the basics of circuits — voltage, current, resistance, Ohm's law, and how to analyse AC and DC systems.">▸ Electrical Principles</span>
+            <span class="mod" data-info="Went through statics and dynamics — forces, moments, equilibrium and Newton's laws in the context of mechanical structures.">▸ Fundamentals of Mechanics</span>
+            <span class="mod" data-info="A broad intro to engineering — touched on design thinking, problem solving and got an overview of what robotics and mechatronics actually involves.">▸ Introduction to Engineering</span>
+            <span class="mod" data-info="Used Autodesk Inventor to create and read 2D and 3D engineering drawings. Covered tolerancing, assembly views and how to put together a bill of materials.">▸ Engineering Drawing & Modelling</span>
+            <span class="mod" data-info="Went through different material types — metals, polymers, composites, ceramics — and how to pick the right one depending on what you're building.">▸ Materials Technology</span>
+            <span class="mod" data-info="Covered the basics of fluid mechanics and heat transfer — pressure, flow rate, Bernoulli's equation, and how heat moves through mechanical systems.">▸ Thermofluids</span>
+            <span class="mod" data-info="Learnt about different types of industrial robots, how end-effectors work, coordinate frames, and got into forward and inverse kinematics. Also did some robot programming.">▸ Robotic Systems & Peripherals</span>
+            <span class="mod" data-info="Designed mechanical components like shafts, bearings, gears and fasteners using Autodesk Inventor. Also worked on work-holding fixture designs.">▸ Mechanical Design</span>
+            <span class="mod" data-info="Programmed microcontrollers to talk to sensors and actuators. Used GPIO, I²C, SPI and PWM in Python and C++ for various interfacing tasks.">▸ Device Interfacing & Programming</span>
+            <span class="mod" data-info="Went through analogue components like op-amps, diodes and transistors, as well as digital logic — gates, flip-flops and ADC/DAC conversion.">▸ Analogue & Digital Electronics</span>
+            <span class="mod" data-info="Programmed microcontrollers in C to control hardware — worked with timers, interrupts, ADC and sensor interfacing for embedded system tasks.">▸ Micro-Controller Applications</span>
+            <span class="mod" data-info="Went through quality control in manufacturing — statistical process control, inspection methods, ISO standards and how to assess reliability.">▸ Quality Assurance</span>
+            <span class="mod" data-info="Built an IoT project using Raspberry Pi 4, GrovePi+, SenseHat and Adafruit IO. Had to integrate hardware, write embedded code and connect everything to the cloud.">▸ Embedded System Integration</span>
+            <span class="mod" data-info="Learnt how feedback control systems work — PID controllers, block diagrams and transfer functions. Used Automation Studio to test and simulate system responses.">▸ Automatic Control</span>
+            <span class="mod" data-info="Went through basic machine learning — supervised learning, classification and regression. Also got hands-on with some practical AI tools.">▸ AI Applications</span>
+            <span class="mod" data-info="Worked in a team to develop and prototype an engineering concept from scratch — went through ideation, building and presenting the final solution.">▸ Engineering Innovation Project</span>
+            <span class="mod" data-info="Did lab sessions and industry visits to get a feel for how engineering is actually applied in the real world. Good exposure to different areas of mechatronics.">▸ Engineering Exploration Project</span>
+            <span class="mod" data-info="Covered the basics of entrepreneurship — ideation, business model canvas, market research and pitching. Applied it all to an engineering-based startup concept.">▸ Fundamentals of Innovation & Enterprise</span>
+            <span class="mod" data-info="Developed and pitched EcoPaw as a full business concept. Covered the problem, value proposition, competitor analysis, business model and roadmap.">▸ Technopreneurship</span>
+            <span class="mod" data-info="Picked up digital tools for the workplace — productivity software, collaboration platforms and basic data management.">▸ Workplace Digital Skills</span>
+            <span class="mod" data-info="Worked on professional communication — technical writing, presentations, email etiquette, resume writing and personal branding. This module is where the portfolio comes from.">▸ Effective Communication Skills</span>
+          </div>
+        </div>
+
+        <!-- Module popup -->
+        <div id="mod-popup" style="display:none;position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--graphite);color:var(--paper);padding:1rem 1.4rem;border-radius:6px;max-width:420px;width:90%;font-size:.88rem;line-height:1.5;z-index:999;border-left:3px solid var(--amber);box-shadow:0 8px 32px rgba(0,0,0,.35);">
+          <span id="mod-popup-text"></span>
+          <button onclick="document.getElementById('mod-popup').style.display='none'" style="position:absolute;top:.5rem;right:.7rem;background:none;border:none;color:var(--silver);cursor:pointer;font-size:1rem;">✕</button>
+        </div>
+
+        <style>
+          .mod{cursor:pointer;transition:color .15s;padding:.15rem 0;}
+          .mod:hover{color:var(--steel);}
+          .mod.active{color:var(--amber);font-weight:600;}
+        </style>
+        <script>
+          document.querySelectorAll('.mod').forEach(el=>{
+            el.addEventListener('click',()=>{
+              document.querySelectorAll('.mod').forEach(m=>m.classList.remove('active'));
+              el.classList.add('active');
+              const popup=document.getElementById('mod-popup');
+              document.getElementById('mod-popup-text').textContent=el.dataset.info;
+              popup.style.display='block';
+            });
+          });
+        </script>
+        <div class="info-card">
+          <h4>Competitions & Activities</h4>
+          <ul>
+            <li>NUS Hydrogen Innovations Challenge 2026</li>
+            <li>Huawei Tech4City Competition 2026</li>
+            <li>Singapore Physics League 2026</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="info-card" style="margin-bottom:1.2rem;">
+        <h4>Technical Skills</h4>
+        <div class="skill-grid">
+          <span class="skill-pill highlight">Python (Tkinter, Adafruit IO)</span>
+          <span class="skill-pill highlight">C / C++ (Embedded)</span>
+          <span class="skill-pill">PLC Programming (Ladder Logic, GRAFCET)</span>
+          <span class="skill-pill">Autodesk Inventor (3D CAD, BOM)</span>
+          <span class="skill-pill">Automation Studio (PID, Motion Control)</span>
+          <span class="skill-pill">Raspberry Pi / GrovePi+ (I²C, GPIO, SPI)</span>
+          <span class="skill-pill">IoT & Cloud (Adafruit IO Dashboards)</span>
+          <span class="skill-pill">IP Networking (Subnetting, VLSM, CIDR)</span>
+          <span class="skill-pill">Basic Machine Learning (Classification, Regression)</span>
+          <span class="skill-pill">Microsoft Office (PowerPoint, Excel, Word)</span>
+          <span class="skill-pill">Analogue & Digital Electronics</span>
+          <span class="skill-pill">Embedded Systems Integration</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h4>Business & Soft Skills</h4>
+        <div class="skill-grid">
+          <span class="skill-pill highlight">B2B & B2C Sales</span>
+          <span class="skill-pill highlight">Negotiation & Deal Closing</span>
+          <span class="skill-pill">Client Relationship Management</span>
+          <span class="skill-pill">E-Commerce & Digital Marketing</span>
+          <span class="skill-pill">Business Operations & Cash Flow</span>
+          <span class="skill-pill">Product Authentication & Valuation</span>
+          <span class="skill-pill">Pitch Presentations</span>
+          <span class="skill-pill">Teamwork & Collaboration</span>
+          <span class="skill-pill">Professional Communication</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="projects">
-  <div class="section-head">
-    <span class="section-tag">02 / Selected Work</span>
+<!-- PROJECTS -->
+<section id="projects" style="background:#f0ede8;">
+  <div class="sec-head">
+    <span class="sec-tag">02 / Selected Work</span>
     <h2>Projects</h2>
   </div>
 
-  <!-- PROJECT 1: WATCHES -->
+  <!-- PRJ 1: WATCHES -->
   <div class="project">
-    <div class="project-head">
+    <div class="proj-head">
       <div>
         <div class="pid">PRJ-01 // SELF-FOUNDED BUSINESS</div>
         <h3>Luxury Watch Resale Business</h3>
       </div>
       <div class="pdate">2024 — Present</div>
     </div>
-    <div class="project-body">
+    <div class="proj-body">
       <div>
-        <div class="watch-gallery">
-          <img src="images/watch1.jpg" alt="Collection of luxury watches">
-          <img src="images/watch2.jpg" alt="Dive watch on rocks">
+        <div class="watch-grid">
+          <img src="images/watch1.jpg" alt="Luxury watch collection">
+          <img src="images/watch2.jpg" alt="Dive watch">
           <img src="images/watch3.jpg" alt="Luxury dress watches">
-          <a href="https://carousell.app.link/qBIrn3XiW3b" target="_blank" rel="noopener" class="carousell-link">
+          <a href="https://carousell.app.link/qBIrn3XiW3b" target="_blank" rel="noopener" class="watch-cta">
             <span>View Live Shop ↗</span>
             <span>Carousell Listings</span>
           </a>
         </div>
       </div>
-      <div class="project-detail">
+      <div class="proj-detail">
         <div class="field">
-          <div class="field-label">Scope</div>
-          <div class="field-value">Self-founded resale operation specialising in pre-owned luxury watches — from sourcing to final sale, run entirely independently.</div>
+          <div class="field-lbl">Scope</div>
+          <div class="field-val">Self-founded resale business specialising in pre-owned luxury watches. Covers end-to-end operations — sourcing, authentication, valuation, marketing, sales and after-sales management.</div>
         </div>
         <div class="field">
-          <div class="field-label">My Role & Approach</div>
-          <div class="field-value">Founder and sole operator. Built buyer trust through accurate authentication and condition grading, and data-led pricing using market research and competitor benchmarking.</div>
+          <div class="field-lbl">My Role</div>
+          <div class="field-val">Founder and sole operator. Built buyer trust through accurate watch authentication and condition grading. Used market research and competitor benchmarking to set pricing and maximise margins.</div>
         </div>
         <div class="field">
-          <div class="field-label">Process</div>
-          <div class="field-value">
-            <ul>
-              <li>Sourced and verified authenticity/condition of pre-owned watches</li>
-              <li>Researched market prices and set competitive pricing</li>
-              <li>Marketed listings and negotiated with buyers</li>
-              <li>Managed inventory, transactions, cash flow and after-sales follow-up</li>
-            </ul>
-          </div>
+          <div class="field-lbl">What I Did</div>
+          <div class="field-val"><ul>
+            <li>Sourced pre-owned watches and verified authenticity and condition</li>
+            <li>Set pricing based on live market research and demand trends</li>
+            <li>Marketed listings across e-commerce and social platforms</li>
+            <li>Negotiated with buyers and managed repeat customer relationships</li>
+            <li>Handled inventory, cash flow and after-sales follow-up independently</li>
+          </ul></div>
         </div>
       </div>
     </div>
     <div class="result-strip">
-      <div class="stat"><b>S$300 → 5-Fig</b><span>Revenue Growth (Year 1)</span></div>
-      <div class="stat"><b>Repeat</b><span>Customer & Collector Base Built</span></div>
+      <div class="stat"><b>S$300 → 5-Fig</b><span>Revenue within Year 1</span></div>
+      <div class="stat"><b>Repeat Buyers</b><span>Loyal Customer Base Built</span></div>
+      <div class="stat"><b>End-to-End</b><span>Operations Run Independently</span></div>
     </div>
   </div>
 
-  <!-- PROJECT 2: ECOPAW SLIDESHOW -->
+  <!-- PRJ 2: ECOPAW -->
   <div class="project">
-    <div class="project-head">
+    <div class="proj-head">
       <div>
-        <div class="pid">PRJ-02 // TECHNOPRENEURSHIP MODULE</div>
-        <h3>EcoPaw — Smart Pet Waste Management</h3>
+        <div class="pid">PRJ-02 // TECHNOPRENEURSHIP MODULE — NYP</div>
+        <h3>EcoPaw — Smart Dog Waste Management System</h3>
       </div>
       <div class="pdate">2026</div>
     </div>
-    <div class="project-body" style="grid-template-columns: 1.2fr 1fr;">
+    <div class="proj-body" style="grid-template-columns:1.3fr 1fr;">
       <div>
-        <div class="slideshow" id="ecopaw-slider">
-          <div class="slideshow-inner" id="ecopaw-inner">
-            <img src="images/ecopaw_slide_01.png" alt="EcoPaw slide 1">
-            <img src="images/ecopaw_slide_03.png" alt="EcoPaw slide 3">
-            <img src="images/ecopaw_slide_04.png" alt="EcoPaw slide 4">
-            <img src="images/ecopaw_slide_05.png" alt="EcoPaw slide 5">
-            <img src="images/ecopaw_slide_07.png" alt="EcoPaw slide 7">
-            <img src="images/ecopaw_slide_08.png" alt="EcoPaw slide 8">
-            <img src="images/ecopaw_slide_09.png" alt="EcoPaw slide 9">
-            <img src="images/ecopaw_slide_10.png" alt="EcoPaw slide 10">
-            <img src="images/ecopaw_slide_11.png" alt="EcoPaw slide 11">
-            <img src="images/ecopaw_slide_12.png" alt="EcoPaw slide 12">
-            <img src="images/ecopaw_slide_14.png" alt="EcoPaw slide 14">
-            <img src="images/ecopaw_slide_15.png" alt="EcoPaw slide 15">
-            <img src="images/ecopaw_slide_16.png" alt="EcoPaw slide 16">
-            <img src="images/ecopaw_slide_17.png" alt="EcoPaw slide 17">
-            <img src="images/ecopaw_slide_18.png" alt="EcoPaw slide 18">
-            <img src="images/ecopaw_slide_19.png" alt="EcoPaw slide 19">
-            <img src="images/ecopaw_slide_20.png" alt="EcoPaw slide 20">
-            <img src="images/ecopaw_slide_22.png" alt="EcoPaw slide 22">
+        <div class="slideshow" id="ep">
+          <div class="slide-track" id="ep-t">
+            <img src="images/ecopaw_slide_01.png" alt="EcoPaw title">
+            <img src="images/ecopaw_slide_03.png" alt="Problem — 670 complaints">
+            <img src="images/ecopaw_slide_04.png" alt="Rising pet ownership">
+            <img src="images/ecopaw_slide_05.png" alt="Why owners don't pick up">
+            <img src="images/ecopaw_slide_07.png" alt="EcoPawScoop vs Petmaker">
+            <img src="images/ecopaw_slide_08.png" alt="EcoPaw Bin vs PawPail">
+            <img src="images/ecopaw_slide_09.png" alt="EcoPaw App vs Poop Scouts">
+            <img src="images/ecopaw_slide_10.png" alt="System storyboard">
+            <img src="images/ecopaw_slide_11.png" alt="Scoop USP">
+            <img src="images/ecopaw_slide_12.png" alt="Bin USP">
+            <img src="images/ecopaw_slide_14.png" alt="Market research">
+            <img src="images/ecopaw_slide_15.png" alt="EcoPawScoop parts">
+            <img src="images/ecopaw_slide_16.png" alt="Scoop 3D model">
+            <img src="images/ecopaw_slide_17.png" alt="EcoPaw Bin">
+            <img src="images/ecopaw_slide_18.png" alt="Bin views">
+            <img src="images/ecopaw_slide_19.png" alt="EcoPaw App">
+            <img src="images/ecopaw_slide_20.png" alt="App screens">
+            <img src="images/ecopaw_slide_22.png" alt="System unfair advantage">
           </div>
-          <button class="slide-btn slide-prev" onclick="slide('ecopaw',–1)">&#8592;</button>
-          <button class="slide-btn slide-next" onclick="slide('ecopaw',1)">&#8594;</button>
-          <div class="slide-counter" id="ecopaw-counter">1 / 18</div>
+          <button class="slide-btn slide-prev" onclick="mv('ep',-1)">&#8592;</button>
+          <button class="slide-btn slide-next" onclick="mv('ep',1)">&#8594;</button>
+          <div class="slide-ctr" id="ep-c">1 / 18</div>
         </div>
       </div>
-      <div class="project-detail">
+      <div class="proj-detail">
         <div class="field">
-          <div class="field-label">Scope</div>
-          <div class="field-value">Group pitch for the Technopreneurship module — a full smart dog waste management system: hands-free EcoPawScoop, IoT smart bin with HEPA filtration, and a gamified rewards app (Carbon Points).</div>
+          <div class="field-lbl">Scope</div>
+          <div class="field-val">Group project for the Technopreneurship module. A 3-part smart dog waste system: the EcoPawScoop (hands-free scooper with auto-seal), EcoPaw Bin (IoT smart bin with touchless lid, 4-stage HEPA filtration and QR code generator), and EcoPaw App (gamified Carbon Points rewards).</div>
         </div>
         <div class="field">
-          <div class="field-label">My Role & Approach</div>
-          <div class="field-value">Led the pitch deck, competitor analysis, and rewards app UI/UX design. Focused on differentiating EcoPaw from existing competitors (Petmaker, PawPail, Poop Scouts) through feature benchmarking.</div>
+          <div class="field-lbl">My Role</div>
+          <div class="field-val">Led the pitch deck, competitor analysis and rewards app UI/UX design. Benchmarked EcoPaw against Petmaker, PawPail and Poop Scouts across 6 feature categories. Designed app wireframes covering QR scanning, Carbon Points earning and a voucher/product redemption store.</div>
         </div>
         <div class="field">
-          <div class="field-label">Process</div>
-          <div class="field-value">
-            <ul>
-              <li>Conducted market & competitor analysis</li>
-              <li>Structured pitch: problem, value proposition, business model</li>
-              <li>Designed rewards app UI/UX — QR scan, Carbon Points, voucher store</li>
-              <li>Built 3D model slides using Autodesk Inventor</li>
-            </ul>
-          </div>
+          <div class="field-lbl">What I Did</div>
+          <div class="field-val"><ul>
+            <li>Structured and built the full pitch deck (problem → solution → USP → business model)</li>
+            <li>Conducted market research and competitor feature benchmarking</li>
+            <li>Designed EcoPaw rewards app UI/UX</li>
+            <li>Created 3D model slides in Autodesk Inventor</li>
+          </ul></div>
+        </div>
+        <div class="field">
+          <div class="field-lbl">Key Insight</div>
+          <div class="field-val">Singapore recorded 670 pet waste complaints in HDB estates in 2023. No existing competitor combines a scoop, smart bin and rewards app. EcoPaw does all three.</div>
         </div>
       </div>
     </div>
     <div class="result-strip">
-      <div class="stat"><b>Full Pitch</b><span>Delivered to Evaluators</span></div>
-      <div class="stat"><b>3-Part System</b><span>Scoop + Bin + App</span></div>
-      <div class="stat"><b>Competitor Analysis</b><span>5 Brands Benchmarked</span></div>
+      <div class="stat"><b>3-Part System</b><span>Scoop + Smart Bin + Rewards App</span></div>
+      <div class="stat"><b>IoT Integrated</b><span>QR code generation + cloud-linked bin</span></div>
+      <div class="stat"><b>Autodesk Inventor</b><span>3D CAD modelling of scoop & bin</span></div>
+      <div class="stat"><b>App UI/UX</b><span>Wireframes for Carbon Points & redemption</span></div>
     </div>
   </div>
 
-  <!-- PROJECT 3: SMART PILL DISPENSER -->
+  <!-- PRJ 3: PILL DISPENSER -->
   <div class="project">
-    <div class="project-head">
+    <div class="proj-head">
       <div>
-        <div class="pid">PRJ-03 // EGR206 IOT PROJECT — NANYANG POLYTECHNIC</div>
+        <div class="pid">PRJ-03 // EGR206 IOT PROJECT — NYP</div>
         <h3>Smart Pill Dispenser</h3>
       </div>
       <div class="pdate">2025</div>
     </div>
-    <div class="project-body" style="grid-template-columns: 1.2fr 1fr;">
-      <div>
-        <div class="slideshow" id="pill-slider">
-          <div class="slideshow-inner" id="pill-inner">
-            <img src="images/pill_slide_01.png" alt="Smart Pill Dispenser title slide">
-            <img src="images/pill_slide_02.png" alt="Introduction — hardware used">
-            <img src="images/pill_slide_03.png" alt="How medication is managed today">
-            <img src="images/pill_slide_04.png" alt="The problem we are solving">
-            <img src="images/pill_slide_05.png" alt="What our prototype does">
-            <img src="images/pill_slide_06.png" alt="Live demo walkthrough">
-            <img src="images/pill_slide_07.png" alt="System operation flowchart">
-            <img src="images/pill_slide_08.png" alt="Conclusion and future improvements">
-            <img src="images/pill_slide_09.png" alt="Team contributions">
-            <img src="images/pill_dashboard.png" alt="Tkinter GUI Dashboard">
-            <img src="images/pill_hardware_front.png" alt="Hardware front view">
-            <img src="images/pill_hardware_internal.png" alt="Internal wiring and components">
-            <img src="images/pill_servo_code.png" alt="Servo motor configuration code">
-            <img src="images/pill_sensehat_code.png" alt="SenseHat verification code">
+
+    <!-- SLIDESHOW FULL WIDTH -->
+    <div style="padding:1.5rem 1.8rem 0;">
+      <div class="slideshow" id="pd">
+        <div class="slide-track" id="pd-t">
+          <img src="images/pill_slide_01.png" alt="Smart Pill Dispenser — EGR206 IoT Project">
+          <img src="images/pill_slide_02.png" alt="Introduction — hardware and tech used">
+          <img src="images/pill_slide_03.png" alt="How medication is managed today">
+          <img src="images/pill_slide_04.png" alt="The problem — 50% non-adherence, 125K deaths">
+          <img src="images/pill_slide_05.png" alt="What the prototype does">
+          <img src="images/pill_slide_06.png" alt="Live demo walkthrough">
+          <img src="images/pill_slide_07.png" alt="System operation flowchart">
+          <img src="images/pill_slide_08.png" alt="Conclusion and future improvements">
+          <img src="images/pill_slide_09.png" alt="Team contributions — Adib & Qinxuan">
+          <img src="images/pill_dashboard.png" alt="Tkinter GUI Dashboard screenshot">
+          <img src="images/pill_hardware_front.png" alt="Hardware — front panel with labelled parts">
+          <img src="images/pill_hardware_internal.png" alt="Hardware — internal wiring and components">
+          <img src="images/pill_servo_code.png" alt="Code — servo motor configuration">
+          <img src="images/pill_sensehat_code.png" alt="Code — SenseHat passcode and LED logic">
+        </div>
+        <button class="slide-btn slide-prev" onclick="mv('pd',-1)">&#8592;</button>
+        <button class="slide-btn slide-next" onclick="mv('pd',1)">&#8594;</button>
+        <div class="slide-ctr" id="pd-c">1 / 14</div>
+      </div>
+    </div>
+
+    <!-- CONTENT BELOW SLIDESHOW -->
+    <div class="proj-body" style="margin-top:0;">
+      <div class="proj-detail">
+        <div class="field">
+          <div class="field-lbl">The Problem</div>
+          <div class="field-val">50% of patients don't take medication as prescribed. Over 125,000 deaths per year are linked to medication non-adherence and 1 in 3 assisted care patients experience a dosing error. Current solutions (pill boxes, blister packs, nurse rounds) have no automated alerts, tracking or remote visibility.</div>
+        </div>
+        <div class="field">
+          <div class="field-lbl">Our Solution</div>
+          <div class="field-val">A fully integrated, IoT-connected medication dispenser built on Raspberry Pi 4 with GrovePi+, SenseHat, servo motors and Adafruit IO. The device secures, dispenses, monitors and reports medication usage in real time — with cloud sync and a doctor-facing GUI dashboard.</div>
+        </div>
+        <div class="field">
+          <div class="field-lbl">Tech Stack</div>
+          <div class="field-val">
+            <div class="skill-grid" style="margin-top:.3rem;">
+              <span class="skill-pill highlight">Raspberry Pi 4</span>
+              <span class="skill-pill highlight">Python</span>
+              <span class="skill-pill highlight">Tkinter</span>
+              <span class="skill-pill">GrovePi+</span>
+              <span class="skill-pill">SenseHat</span>
+              <span class="skill-pill">PCA9685 Servo Driver</span>
+              <span class="skill-pill">Adafruit IO</span>
+              <span class="skill-pill">I²C LCD Display</span>
+            </div>
           </div>
-          <button class="slide-btn slide-prev" onclick="slide('pill',-1)">&#8592;</button>
-          <button class="slide-btn slide-next" onclick="slide('pill',1)">&#8594;</button>
-          <div class="slide-counter" id="pill-counter">1 / 14</div>
         </div>
       </div>
-      <div class="project-detail">
+      <div class="proj-detail">
         <div class="field">
-          <div class="field-label">The Problem</div>
-          <div class="field-value">50% of patients don't take medication as prescribed. Over 125,000 deaths per year are linked to medication non-adherence, and 1 in 3 assisted care patients experience a dosing error. Current solutions — manual pill boxes, blister packs, nurse rounds — rely entirely on human memory with no alerts, tracking or remote visibility.</div>
-        </div>
-        <div class="field">
-          <div class="field-label">Our Solution</div>
-          <div class="field-value">A fully integrated, IoT-connected medication management system built on Raspberry Pi 4 with GrovePi+, SenseHat, servo motors, and Adafruit IO cloud. The device secures, dispenses, monitors and reports medication usage in real time.</div>
-        </div>
-        <div class="field">
-          <div class="field-label">My Contributions</div>
-          <div class="field-value">
-            <ul>
-              <li><strong>Tkinter GUI dashboard</strong> — doctor admin panel with password login, live pill count, dose status, system alerts and remote refill management</li>
-              <li><strong>Adafruit IO cloud integration</strong> — streamed all events live (door state, pill count, dose flags, temperature, alerts)</li>
-              <li><strong>Real-time status sync</strong> — resolved hardware-to-cloud feed mismatches to ensure accurate data</li>
-              <li><strong>Presentation slides</strong> — designed all project slides</li>
-            </ul>
-          </div>
-        </div>
-        <div class="field">
-          <div class="field-label">System Features</div>
-          <div class="field-value">
-            <ul>
-              <li>4-digit joystick passcode on SenseHat LED matrix — wrong entry triggers red flash and scrolling alert</li>
-              <li>Servo-controlled access panel — auto-relocks after 5-second buzzer warning</li>
-              <li>Button-triggered dispenser servo — drops one pill per press</li>
-              <li>Ultrasonic pill counter — maps distance to count (0–4 pills), live LCD display</li>
-              <li>Light sensor tamper detection — buzzer and LED alarm if panel left open</li>
-              <li>Debug mode — hidden passcode [0,0,0,0] for engineering access, logged to cloud</li>
-            </ul>
-          </div>
-        </div>
-        <div class="field">
-          <div class="field-label">Tech Stack</div>
-          <div class="field-value">Raspberry Pi 4 &nbsp;·&nbsp; GrovePi+ &nbsp;·&nbsp; SenseHat &nbsp;·&nbsp; PCA9685 PWM Driver &nbsp;·&nbsp; Python &nbsp;·&nbsp; Tkinter &nbsp;·&nbsp; Adafruit IO</div>
+          <div class="field-lbl">System Features</div>
+          <div class="field-val"><ul>
+            <li>4-digit joystick passcode on SenseHat LED matrix (wrong entry → red flash + scrolling alert)</li>
+            <li>Servo-controlled security panel — auto-relocks after 5-second buzzer warning</li>
+            <li>Button-triggered dispenser servo — drops one pill per press</li>
+            <li>Ultrasonic pill counter — maps distance to pill count (0–4), shown on LCD</li>
+            <li>Light sensor tamper detection — buzzer and LED alarm if panel left open</li>
+            <li>Debug mode — hidden passcode [0,0,0,0] for engineering access, all events logged to cloud</li>
+          </ul></div>
         </div>
       </div>
     </div>
     <div class="result-strip">
-      <div class="stat"><b>Fully Integrated</b><span>IoT Prototype Delivered</span></div>
+      <div class="stat"><b>Fully Working</b><span>Integrated IoT Prototype</span></div>
       <div class="stat"><b>Cloud-Connected</b><span>Real-Time GUI Dashboard</span></div>
       <div class="stat"><b>125K+</b><span>Deaths/Year Problem Addressed</span></div>
-      <div class="stat"><b>6 Features</b><span>Security, Dispense, Count, Tamper, Cloud, GUI</span></div>
+      <div class="stat"><b>6 Features</b><span>Security · Dispense · Count · Tamper · Cloud · GUI</span></div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="contact">
-  <div class="section-head">
-    <span class="section-tag">03 / Get In Touch</span>
+<!-- CONTACT -->
+<section id="contact" class="contact-sec">
+  <div class="sec-head">
+    <span class="sec-tag">03 / Get In Touch</span>
     <h2>Contact</h2>
   </div>
   <div class="contact-grid">
-    <div class="contact-item">
-      <div class="field-label">Email</div>
+    <div class="c-item">
+      <div class="field-lbl">Email</div>
       <a href="mailto:qinxuan703@gmail.com">qinxuan703@gmail.com</a>
     </div>
-    <div class="contact-item">
-      <div class="field-label">Phone</div>
+    <div class="c-item">
+      <div class="field-lbl">Phone</div>
       <a href="tel:+6580833347">+65 8083 3347</a>
     </div>
-    <div class="contact-item">
-      <div class="field-label">LinkedIn</div>
+    <div class="c-item">
+      <div class="field-lbl">LinkedIn</div>
       <a href="https://linkedin.com/in/ngqinxuan" target="_blank" rel="noopener">linkedin.com/in/ngqinxuan</a>
     </div>
-    <div class="contact-item">
-      <div class="field-label">Watch Shop</div>
-      <a href="https://carousell.app.link/qBIrn3XiW3b" target="_blank" rel="noopener">View on Carousell ↗</a>
+    <div class="c-item">
+      <div class="field-lbl">Watch Shop</div>
+      <a href="https://carousell.app.link/qBIrn3XiW3b" target="_blank" rel="noopener">Carousell ↗</a>
     </div>
   </div>
 </section>
 
-<footer>NG QIN XUAN — DIGITAL PORTFOLIO — NYP DIPLOMA IN ROBOTICS & MECHATRONICS</footer>
+<footer>NG QIN XUAN &nbsp;·&nbsp; NYP DIPLOMA IN ROBOTICS & MECHATRONICS &nbsp;·&nbsp; DIGITAL PORTFOLIO</footer>
 
 <script>
-const sliders = { ecopaw: 0, pill: 0 };
-const totals = { ecopaw: 18, pill: 14 };
-
-function slide(id, dir) {
-  sliders[id] = (sliders[id] + dir + totals[id]) % totals[id];
-  document.getElementById(id + '-inner').style.transform = `translateX(-${sliders[id] * 100}%)`;
-  document.getElementById(id + '-counter').textContent = `${sliders[id]+1} / ${totals[id]}`;
+const cur={ep:0,pd:0};
+const tot={ep:18,pd:14};
+function mv(id,d){
+  cur[id]=(cur[id]+d+tot[id])%tot[id];
+  document.getElementById(id+'-t').style.transform=`translateX(-${cur[id]*100}%)`;
+  document.getElementById(id+'-c').textContent=`${cur[id]+1} / ${tot[id]}`;
 }
-
-// Keyboard navigation
-document.addEventListener('keydown', e => {
-  if (e.key === 'ArrowLeft') slide('ecopaw', -1);
-  if (e.key === 'ArrowRight') slide('ecopaw', 1);
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowLeft')mv('ep',-1);
+  if(e.key==='ArrowRight')mv('ep',1);
 });
 </script>
 </body>
