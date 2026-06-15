@@ -45,7 +45,7 @@ section{padding:5vw 6vw;}
 .sec-head h2{font-family:var(--dp);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;letter-spacing:-.01em;}
 
 /* ABOUT */
-.about-grid{display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start;}
+.about-grid{display:grid;grid-template-columns:220px 1fr;gap:2.5rem;align-items:start;}
 .about-left{}
 .profile-card{background:var(--graphite);color:var(--paper);border-radius:6px;overflow:hidden;}
 .profile-photo{width:100%;aspect-ratio:1;background:var(--soft);display:flex;align-items:center;justify-content:center;font-family:var(--mn);color:var(--steel);font-size:.8rem;border-bottom:1px solid var(--line);}
@@ -412,69 +412,62 @@ footer{text-align:center;padding:1.5rem;font-family:var(--mn);font-size:.72rem;c
       <div class="pdate">2025</div>
     </div>
 
-    <!-- SLIDESHOW FULL WIDTH -->
-    <div style="padding:1.5rem 1.8rem 0;">
-      <div class="slideshow" id="pd">
-        <div class="slide-track" id="pd-t">
-          <img src="images/pill_slide_01.png" alt="Smart Pill Dispenser — EGR206 IoT Project">
-          <img src="images/pill_slide_02.png" alt="Introduction — hardware and tech used">
-          <img src="images/pill_slide_03.png" alt="How medication is managed today">
-          <img src="images/pill_slide_04.png" alt="The problem — 50% non-adherence, 125K deaths">
-          <img src="images/pill_slide_05.png" alt="What the prototype does">
-          <img src="images/pill_slide_06.png" alt="Live demo walkthrough">
-          <img src="images/pill_slide_07.png" alt="System operation flowchart">
-          <img src="images/pill_slide_08.png" alt="Conclusion and future improvements">
-          <img src="images/pill_slide_09.png" alt="Team contributions — Adib & Qinxuan">
-          <img src="images/pill_dashboard.png" alt="Tkinter GUI Dashboard screenshot">
-          <img src="images/pill_hardware_front.png" alt="Hardware — front panel with labelled parts">
-          <img src="images/pill_hardware_internal.png" alt="Hardware — internal wiring and components">
-          <img src="images/pill_servo_code.png" alt="Code — servo motor configuration">
-          <img src="images/pill_sensehat_code.png" alt="Code — SenseHat passcode and LED logic">
+    <!-- SLIDESHOW + CONTENT SIDE BY SIDE -->
+    <div class="proj-body" style="grid-template-columns:1.2fr 1fr;">
+      <div>
+        <div class="slideshow" id="pd">
+          <div class="slide-track" id="pd-t">
+            <img src="images/pill_slide_01.png" alt="Smart Pill Dispenser — EGR206 IoT Project">
+            <img src="images/pill_slide_02.png" alt="Introduction — hardware and tech used">
+            <img src="images/pill_slide_03.png" alt="How medication is managed today">
+            <img src="images/pill_slide_04.png" alt="The problem — 50% non-adherence, 125K deaths">
+            <img src="images/pill_slide_05.png" alt="What the prototype does">
+            <img src="images/pill_slide_06.png" alt="Live demo walkthrough">
+            <img src="images/pill_slide_07.png" alt="System operation flowchart">
+            <img src="images/pill_slide_08.png" alt="Conclusion and future improvements">
+            <img src="images/pill_slide_09.png" alt="Team contributions">
+            <img src="images/pill_dashboard.png" alt="Tkinter GUI Dashboard screenshot">
+            <img src="images/pill_hardware_front.png" alt="Hardware — front panel with labelled parts">
+            <img src="images/pill_hardware_internal.png" alt="Hardware — internal wiring and components">
+            <img src="images/pill_servo_code.png" alt="Code — servo motor configuration">
+            <img src="images/pill_sensehat_code.png" alt="Code — SenseHat passcode and LED logic">
+          </div>
+          <button class="slide-btn slide-prev" onclick="mv('pd',-1)">&#8592;</button>
+          <button class="slide-btn slide-next" onclick="mv('pd',1)">&#8594;</button>
+          <div class="slide-ctr" id="pd-c">1 / 14</div>
         </div>
-        <button class="slide-btn slide-prev" onclick="mv('pd',-1)">&#8592;</button>
-        <button class="slide-btn slide-next" onclick="mv('pd',1)">&#8594;</button>
-        <div class="slide-ctr" id="pd-c">1 / 14</div>
       </div>
-    </div>
-
-    <!-- CONTENT BELOW SLIDESHOW -->
-    <div class="proj-body" style="margin-top:0;">
-      <div class="proj-detail">
+      <div>
         <div class="field">
           <div class="field-lbl">The Problem</div>
-          <div class="field-val">50% of patients don't take medication as prescribed. Over 125,000 deaths per year are linked to medication non-adherence and 1 in 3 assisted care patients experience a dosing error. Current solutions (pill boxes, blister packs, nurse rounds) have no automated alerts, tracking or remote visibility.</div>
+          <div class="field-val">50% of patients don't take medication as prescribed. Over 125,000 deaths per year are linked to non-adherence and 1 in 3 assisted care patients experience a dosing error. Existing solutions have no automated alerts, tracking or remote visibility.</div>
         </div>
         <div class="field">
           <div class="field-lbl">Our Solution</div>
-          <div class="field-val">A fully integrated, IoT-connected medication dispenser built on Raspberry Pi 4 with GrovePi+, SenseHat, servo motors and Adafruit IO. The device secures, dispenses, monitors and reports medication usage in real time — with cloud sync and a doctor-facing GUI dashboard.</div>
+          <div class="field-val">An IoT-connected pill dispenser on Raspberry Pi 4 with GrovePi+, SenseHat, servo motors and Adafruit IO. Secures, dispenses, monitors and reports medication usage in real time.</div>
         </div>
-        <div class="field">
-          <div class="field-lbl">Tech Stack</div>
-          <div class="field-val">
-            <div class="skill-grid" style="margin-top:.3rem;">
-              <span class="skill-pill highlight">Raspberry Pi 4</span>
-              <span class="skill-pill highlight">Python</span>
-              <span class="skill-pill highlight">Tkinter</span>
-              <span class="skill-pill">GrovePi+</span>
-              <span class="skill-pill">SenseHat</span>
-              <span class="skill-pill">PCA9685 Servo Driver</span>
-              <span class="skill-pill">Adafruit IO</span>
-              <span class="skill-pill">I²C LCD Display</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="proj-detail">
         <div class="field">
           <div class="field-lbl">System Features</div>
           <div class="field-val"><ul>
-            <li>4-digit joystick passcode on SenseHat LED matrix (wrong entry → red flash + scrolling alert)</li>
-            <li>Servo-controlled security panel — auto-relocks after 5-second buzzer warning</li>
-            <li>Button-triggered dispenser servo — drops one pill per press</li>
-            <li>Ultrasonic pill counter — maps distance to pill count (0–4), shown on LCD</li>
-            <li>Light sensor tamper detection — buzzer and LED alarm if panel left open</li>
-            <li>Debug mode — hidden passcode [0,0,0,0] for engineering access, all events logged to cloud</li>
+            <li>4-digit joystick passcode on SenseHat LED matrix</li>
+            <li>Servo panel — auto-relocks after 5-second warning</li>
+            <li>Dispenser servo — one pill per button press</li>
+            <li>Ultrasonic pill counter — 0–4 pills, shown on LCD</li>
+            <li>Light sensor tamper detection — buzzer + LED alert</li>
+            <li>Debug mode — hidden passcode, all events logged to cloud</li>
           </ul></div>
+        </div>
+        <div class="field">
+          <div class="field-lbl">Tech Stack</div>
+          <div class="field-val" style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.2rem;">
+            <span class="skill-pill highlight">Raspberry Pi 4</span>
+            <span class="skill-pill highlight">Python</span>
+            <span class="skill-pill highlight">Tkinter</span>
+            <span class="skill-pill">GrovePi+</span>
+            <span class="skill-pill">SenseHat</span>
+            <span class="skill-pill">PCA9685</span>
+            <span class="skill-pill">Adafruit IO</span>
+          </div>
         </div>
       </div>
     </div>
